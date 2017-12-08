@@ -8,12 +8,13 @@ import java.util.Stack;
 import javax.swing.JOptionPane;
 
 public class Main {
+	String input;
 	public static void main(String[] args) {
 		Main m = new Main();
 	}
 
 	public Main() {
-		String input = JOptionPane.showInputDialog("Type word you want to find Anagrams for:");
+		input = JOptionPane.showInputDialog("Type word you want to find Anagrams for:");
 		run(input);
 	}
 
@@ -46,8 +47,11 @@ public class Main {
 				}
 			}
 			if (z == array.length) {
-				if (word12 != word) {
+				if (!word12 .equals(input)) {
 					System.out.println(word12);
+				}
+				if (z == 0) {
+					System.out.println("Your word has no Anagrams...");
 				}
 				//return word12;
 			}
